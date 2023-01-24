@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/sites
+Content-Type:  application/json
+
+{
+  "address": "502 Main St",
+  "latLong": [1.142, 2.223],
+  "ownerId": 1
+},
