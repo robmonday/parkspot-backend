@@ -1,6 +1,13 @@
 require('dotenv').config()
 
-let DB_URI = process.env.DB_URI
-let PORT = process.env.port || '8080'
+const dbUrl = (nodeEnv) => {
+  if (nodeEnv === 'testing') {
+    return process.env.TEST_DB_URL
+  }
+  return process.env.DATABASE_URL
+}
 
-module.exports = { DB_URI, PORT }
+const DB_URL = dbUrl(process.env.NODE_ENV)
+const PORT = process.env.port || '8080'
+
+module.exports = { DB_URL, PORT }
