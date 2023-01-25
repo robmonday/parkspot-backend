@@ -6,7 +6,7 @@ Content-Type: application/json
   "lat": "1.142",
   "long": "2.223",
   "imgPath": "generic5.jpg",
-  "ownerId": 1
+  "userId": 2
 }
 
 ###
@@ -18,5 +18,5 @@ Content-Type: application/json
   "lat": "1.142",
   "long": "2.223",
   "imgPath": "generic4.jpg",
-  "ownerId": 1
+  "userId": 2
 }

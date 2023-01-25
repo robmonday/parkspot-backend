@@ -27,7 +27,7 @@ Site.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    ownerId: {
+    userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
@@ -39,7 +39,5 @@ Site.init(
     modelName: 'site',
   }
 )
-
-Site.sync()
 
 module.exports = Site

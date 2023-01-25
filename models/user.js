@@ -32,6 +32,4 @@ User.init(
   }
 )
 
-User.sync()
-
 module.exports = User
