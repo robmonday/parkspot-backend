@@ -11,13 +11,22 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    phone: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     passwordHash: {
       type: DataTypes.STRING,

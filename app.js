@@ -9,6 +9,7 @@ const middleware = require('./utils/middleware')
 
 const sitesRouter = require('./controllers/sites')
 const usersRouter = require('./controllers/users')
+const loginRouter = require('./controllers/login')
 
 logger.info('connecting to', config.DB_URL)
 
@@ -20,6 +21,7 @@ app.use(middleware.requestLogger)
 app.get('/', (req, res) => res.send('<h1>Hello World!</h1>'))
 app.use('/api/sites', sitesRouter)
 app.use('/api/users', usersRouter)
+app.use('/api/login', loginRouter)
 
 if (process.env.NODE_ENV === 'test') {
   const testingRouter = require('.controllers/testing')

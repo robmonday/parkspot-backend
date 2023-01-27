@@ -1,12 +1,12 @@
-const Site = require('./site')
 const User = require('./user')
+const Site = require('./site')
 
 // table relationships go here
 
 User.hasMany(Site)
 Site.belongsTo(User)
 
-Site.sync({ alter: true })
 User.sync({ alter: true })
+Site.sync({ alter: true })
 
-module.exports = { Site, User }
+module.exports = { User, Site }

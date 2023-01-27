@@ -10,4 +10,6 @@ const dbUrl = (nodeEnv) => {
 const DB_URL = dbUrl(process.env.NODE_ENV)
 const PORT = process.env.port || '8080'
 
-module.exports = { DB_URL, PORT }
+const SECRET = process.env.SECRET
+
+module.exports = { DB_URL, PORT, SECRET }

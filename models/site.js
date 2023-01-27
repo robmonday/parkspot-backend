@@ -35,7 +35,7 @@ Site.init(
   {
     sequelize,
     underscored: true,
-    timestamps: false,
+    timestamps: true,
     modelName: 'site',
   }
 )

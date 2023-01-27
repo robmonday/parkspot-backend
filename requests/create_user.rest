@@ -2,7 +2,9 @@ POST http://localhost:8080/api/users
 Content-Type: application/json
 
 {
-  "name": "Rob Monday",
-  "email": "rob.monday@gmail.com",
-  "passwordHash": ";lkjsda;fkljas;dklj09870987poaishdf"
+  "firstName": "Jennie",
+  "lastName": "Monday",
+  "phone": "4324137234",
+  "email": "jenniemmonday@gmail.com",
+  "password": "topsecret"
 }
