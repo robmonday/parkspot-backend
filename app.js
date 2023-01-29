@@ -17,6 +17,7 @@ app.use(cors())
 
 app.use(bodyParser.json())
 app.use(middleware.requestLogger)
+// app.use(middleware.tokenExtractor) // is this the right place?
 
 app.get('/', (req, res) => res.send('<h1>Hello World!</h1>'))
 app.use('/api/sites', sitesRouter)

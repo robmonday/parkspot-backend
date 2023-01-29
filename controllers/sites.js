@@ -1,9 +1,13 @@
-const { Site } = require('../models')
+const { Site, User } = require('../models')
 
 const sitesRouter = require('express').Router()
+const { tokenExtractor } = require('../utils/middleware')
 
 sitesRouter.get('/', async (req, res) => {
-  const sites = await Site.findAll()
+  const sites = await Site.findAll({
+    attributes: { exclude: ['userId'] },
+    include: { model: User, attributes: ['firstName', 'lastName'] },
+  })
   res.json(sites)
 })
 
@@ -16,7 +20,7 @@ sitesRouter.get('/:id', async (req, res) => {
   }
 })
 
-sitesRouter.post('/', async (req, res) => {
+sitesRouter.post('/', tokenExtractor, async (req, res) => {
   try {
     console.log(req.body)
     const site = await Site.create({ ...req.body })
